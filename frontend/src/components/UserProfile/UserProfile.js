@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import StatesContext from '../../context/StatesContext'
 import { useGetUserDetailsQuery, useLogoutUserMutation } from '../../services/userApi'
 import { UserContainer } from './style'
@@ -14,6 +14,7 @@ import {MasonaryLayout} from '../index'
 const UserProfile = () => {
 
   const { id } = useParams()
+  const location = useLocation()
   const navigate = useNavigate()
 
   let keyword = ''
@@ -32,15 +33,27 @@ const UserProfile = () => {
   const randomImg = 'https://source.unsplash.com/1600x900/?nature,photography,technology'
 
   const handleUserLogout = () => {
-
+    
+    setuserInfo('')
     logoutUser()
+
+    googleLogout()
+   
+    navigate('/login')
 
   }
   
 
   useEffect(() => {
 
-    window.scrollTo(0,0)
+    setText('Created')
+    setActivebutton('created')
+
+   }, [id])
+
+
+
+  useEffect(() => {
 
     if (allpins && data) {
       if (text === 'Created') {
@@ -48,7 +61,8 @@ const UserProfile = () => {
         setPins(createdPins)
 
   
-      }else{
+      } 
+      if(text === 'Saved'){
 
         let result = allpins.pins.filter(el => el.saves.some(value => value.user === data.user._id))
       
@@ -56,25 +70,10 @@ const UserProfile = () => {
       }
     }
 
-  }, [allpins, text , id])
+  }, [id , allpins, text])
 
-  useEffect(() => {
-
-    if(response.status === 'fulfilled'){
-
-      googleLogout()
-      setuserInfo('')
-      window.location.reload()
-      navigate('/login')
-
-    }
-   
-  }, [response])
+ 
   
-
-
-  
-
 
   return (
     <>

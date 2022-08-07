@@ -1,13 +1,23 @@
 import { Box } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CreatePin, Feed, Navbar, PinDetails, Search, UserProfile } from '../../components'
 import { Routes, Route } from 'react-router-dom'
+import StatesContext from '../../context/StatesContext'
+import { useLoadUserQuery } from '../../services/userApi'
 
 
 const Pins = () => {
 
   const [searchTerm, setsearchTerm] = useState('')
+
+  const context = useContext(StatesContext)
+  const { userInfo, setuserInfo } = context
+  // const { data , isFetching , refetch} = useLoadUserQuery()
+
+
   
+
+
   return (
     <Box>
 

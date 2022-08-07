@@ -16,18 +16,12 @@ const Home = () => {
 
   const context = useContext(StatesContext)
   const { userInfo, setuserInfo } = context
-  const { data , isFetching} = useLoadUserQuery()
+  // const { data , isFetching} = useLoadUserQuery()
 
   const [open, setopen] = useState(false)
 
 
-  useEffect(() => {
-
-    if (data) {
-      setuserInfo(data)
-    }
-
-  }, [data])
+  
 
 
 
