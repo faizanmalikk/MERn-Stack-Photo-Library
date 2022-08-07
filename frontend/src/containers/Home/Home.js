@@ -1,6 +1,6 @@
 import { Backdrop, Box, IconButton } from '@mui/material'
 import React, { useContext, useEffect, useState } from 'react'
-import { Sidebar, UserProfile } from '../../components'
+import { Sidebar, Spinner, UserProfile } from '../../components'
 import { Link, Route, Routes } from 'react-router-dom'
 import { Menu } from '@mui/icons-material'
 import img from '../../assets/logo.png'
@@ -16,14 +16,9 @@ const Home = () => {
 
   const context = useContext(StatesContext)
   const { userInfo, setuserInfo } = context
-  const { data } = useLoadUserQuery()
+  const { data , isFetching} = useLoadUserQuery()
 
   const [open, setopen] = useState(false)
-
-
-
-
-
 
 
   useEffect(() => {
@@ -86,6 +81,7 @@ const Home = () => {
 
         </Box>
       </HomeContainer>
+      
     </>
   )
 }

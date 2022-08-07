@@ -26,7 +26,7 @@ const Pins = ({ pins: { image, _id, saves, destination , postedBy } }) => {
     saveAs(image.url, 'image.jpg')
   }
 
-  const alreadySaved = !!(saves && saves.filter((item) => item.user === userInfo.user._id)).length
+  const alreadySaved = !!(saves && saves.filter((item) => item.user === userInfo && userInfo.user._id)).length
 
   const handleSave = (e, _id) => {
 

@@ -5,6 +5,7 @@ const baseUrl = 'https://mern-stack-photo-library.vercel.app/api';
 
 export const AuthenticationApi = createApi({
     reducerPath: 'Authenticationapi',
+    tagTypes:['Users'],
     baseQuery: fetchBaseQuery({ baseUrl }),
     endpoints: (builder) => ({
    
@@ -27,6 +28,8 @@ export const AuthenticationApi = createApi({
                     credentials: 'include'
                 }
             },
+
+            
        
            
         }),

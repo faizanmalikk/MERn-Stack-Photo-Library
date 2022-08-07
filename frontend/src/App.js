@@ -35,13 +35,19 @@ function App() {
       setuserInfo(data)
     }
 
+   
+
+  }, [data])
+
+
+  useEffect(() => {
+
     if(isError){
       navigate('/login')
     }
-
-  }, [data , isError])
-
-
+    
+  }, [isError])
+  
 
 
 

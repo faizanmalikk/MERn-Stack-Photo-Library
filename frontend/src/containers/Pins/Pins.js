@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom'
 const Pins = () => {
 
   const [searchTerm, setsearchTerm] = useState('')
+  
   return (
     <Box>
 

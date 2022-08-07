@@ -64,6 +64,7 @@ const UserProfile = () => {
 
       googleLogout()
       setuserInfo('')
+      window.location.reload()
       navigate('/login')
 
     }
