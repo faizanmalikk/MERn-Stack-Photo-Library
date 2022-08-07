@@ -34,12 +34,7 @@ const UserProfile = () => {
 
   const handleUserLogout = () => {
     
-    setuserInfo('')
     logoutUser()
-
-    googleLogout()
-   
-    navigate('/login')
 
   }
   
@@ -71,6 +66,17 @@ const UserProfile = () => {
     }
 
   }, [id , allpins, text])
+
+  useEffect(() => {
+    if(response.status === 'fulfilled'){
+      
+      setuserInfo('')
+      googleLogout()
+   
+      navigate('/login')
+    }
+  }, [response])
+  
 
  
   
