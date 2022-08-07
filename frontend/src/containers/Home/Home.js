@@ -8,7 +8,6 @@ import StatesContext from '../../context/StatesContext'
 import Pins from '../Pins/Pins'
 import { HomeContainer } from './style'
 import { motion } from 'framer-motion';
-import { useLoadUserQuery } from '../../services/userApi'
 
 
 const Home = () => {
@@ -16,7 +15,7 @@ const Home = () => {
 
   const context = useContext(StatesContext)
   const { userInfo, setuserInfo } = context
-  // const { data , isFetching} = useLoadUserQuery()
+
 
   const [open, setopen] = useState(false)
 

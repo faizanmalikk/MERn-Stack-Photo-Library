@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 import logo from '../../assets/logo.png'
 import { GoogleLogin } from '@react-oauth/google';
 import jwtDecode from 'jwt-decode'
-import { useCreateUserMutation, useLoadUserQuery } from '../../services/userApi'
+import { useCreateUserMutation } from '../../services/userApi'
 import { useNavigate } from 'react-router-dom'
 import StatesContext from '../../context/StatesContext'
 

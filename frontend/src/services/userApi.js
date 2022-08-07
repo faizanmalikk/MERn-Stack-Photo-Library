@@ -1,12 +1,11 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-// const baseUrl = 'https://mern-stack-photo-library.vercel.app/api';
-const baseUrl = 'http://localhost:4000/api';
+const baseUrl = 'https://mern-stack-photo-library.vercel.app/api';
+
 
 
 export const AuthenticationApi = createApi({
     reducerPath: 'Authenticationapi',
-    tagTypes:['Users'],
     baseQuery: fetchBaseQuery({ baseUrl }),
     endpoints: (builder) => ({
    
@@ -30,7 +29,7 @@ export const AuthenticationApi = createApi({
                 }
             },
 
-            providesTags:['Users']
+         
        
            
         }),
@@ -55,7 +54,7 @@ export const AuthenticationApi = createApi({
                     credentials: 'include',
                 }
             },
-            // invalidatesTags : ['Users']
+           
         }),
     
        
