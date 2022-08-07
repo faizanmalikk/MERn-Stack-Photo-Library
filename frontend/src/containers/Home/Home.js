@@ -28,6 +28,9 @@ const Home = () => {
     <>
 
       <HomeContainer>
+        
+      <Backdrop open={open} onClick={() => setopen(false)} />
+
         <Box display={{ xs: 'none', md: 'flex' }} position='fixed' left={'0'} top='0' bottom={'0'} width={{ md: '12.5em' }}>
           <Sidebar />
         </Box>
@@ -55,7 +58,6 @@ const Home = () => {
             className='myMenu'
             
             >
-              <Backdrop open={open} onClick={() => setopen(false)} />
 
               <Sidebar open={open} setopen={setopen} />
             </motion.div>
