@@ -3,7 +3,6 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 const baseUrl = 'https://mern-stack-photo-library.vercel.app/api';
 
 
-
 export const AuthenticationApi = createApi({
     reducerPath: 'Authenticationapi',
     baseQuery: fetchBaseQuery({ baseUrl }),
