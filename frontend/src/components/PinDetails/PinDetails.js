@@ -67,7 +67,7 @@ const PinDetails = () => {
         let myData = allPins.pins.filter((pindata) => pindata._id !== data.pins._id)
         setCategorydata(myData)
         setcategoryLoading(false)
-        console.log('data', myData)
+    
       }
 
     }

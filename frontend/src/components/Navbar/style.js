@@ -10,6 +10,7 @@ const NavConatiner = styled(Box)(({ theme }) => ({
         width: '100%',
         display: 'flex',
         gap: '10px',
+        alignItems : 'center'
      
     },
     '.input-box': {
@@ -38,6 +39,10 @@ const NavConatiner = styled(Box)(({ theme }) => ({
         '&:hover':{
             backgroundColor : theme.palette.grey[500],
 
+        },
+        [theme.breakpoints.down('sm')]:{
+            height: '35px',
+            width: '35px', 
         }
         
     }

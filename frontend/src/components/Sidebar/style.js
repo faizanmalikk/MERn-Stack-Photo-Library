@@ -33,7 +33,8 @@ const SidebarConatiner = styled(Box)(({ theme }) => ({
             paddingTop : '1rem'
         },
         [theme.breakpoints.down('sm')]: {
-            width: '80%'
+            width: '80%',
+            paddingTop : '2rem'
         }
 
     },

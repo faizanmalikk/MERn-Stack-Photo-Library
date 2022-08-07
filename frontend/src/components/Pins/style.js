@@ -48,7 +48,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
         textDecoration: 'none',
         transition: 'all 0.4s ease-in-out',
         '.MuiTypography-root': {
-            fontSize: '18px',
+            fontSize: '13px',
             fontWeight: '600',
             color: theme.palette.grey[900]
         },
@@ -61,7 +61,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
         color: 'white',
         backgroundColor: theme.palette.grey[700],
         borderRadius: '50%',
-        fontSize: '24px'
+        fontSize: '17px'
     },
     '.del-pin': {
         position: 'absolute',

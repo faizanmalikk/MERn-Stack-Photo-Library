@@ -92,7 +92,7 @@ const Pins = ({ pins: { image, _id, saves, destination , postedBy } }) => {
               onMouseEnter={() => setisHovered(true)}
             >
               <CallMade className='call-icon' />
-              <Typography>{destination.length > 15 ? `${destination.slice(0, 15)}...`: destination}</Typography>
+              <Typography >{destination.length > 13 ? `${destination.slice(0, 13)}...`: destination}</Typography>
             </Box>
           )}
 

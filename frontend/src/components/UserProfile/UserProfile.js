@@ -87,7 +87,7 @@ const UserProfile = () => {
 
           <Typography
             textAlign={'center'}
-            marginTop='2rem'
+            marginTop={{xs:'3rem',sm:'2rem'}}
             fontWeight={'bold'}
             fontSize='30px'
           >{data.user.name}</Typography>

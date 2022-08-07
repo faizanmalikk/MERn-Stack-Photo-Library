@@ -32,7 +32,7 @@ const Navbar = ({ searchTerm, setsearchTerm }) => {
             disableUnderline: true,
           }} />
         <Link to={`/user-profile/${userInfo && userInfo.user._id}`}>
-          <Box component={'img'} className='image-container' src={userInfo && userInfo.user.image} display={{xs:'none',sm:'flex'}}/>
+          <Box component={'img'} className='image-container' src={userInfo && userInfo.user.image} display={{xs:'none',md:'flex'}}/>
         </Link>
 
         <IconButton component={Link} to='/create-pin' className='add-button'>

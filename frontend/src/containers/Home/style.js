@@ -33,7 +33,7 @@ const HomeContainer = styled(Box)(({ theme }) => ({
         width : '50%',
         zIndex : '5',
         [theme.breakpoints.down('sm')]:{
-            width : '60%'
+            width : '65%'
         }
  
     
