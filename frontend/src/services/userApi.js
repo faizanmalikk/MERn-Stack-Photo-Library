@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-// const baseUrl = 'http://localhost:4000/api';
 const baseUrl = 'https://mern-stack-photo-library.vercel.app/api';
 
 
@@ -51,7 +50,7 @@ export const AuthenticationApi = createApi({
             query: () => {
             return {
                     url: '/logout',
-                    method: 'Get',
+                    method: 'Post',
                     credentials: 'include',
                 }
             },
