@@ -10,6 +10,6 @@ router.route('/user/:id').get(isAuthenticatedUser , getAnyUserDeatils )
 
 router.route('/me').get(isAuthenticatedUser,getLoggedInUserDetails)
 
-router.route('/logout').get(isAuthenticatedUser,logoutUser)
+router.route('/logout').post(isAuthenticatedUser,logoutUser)
 
 module.exports = router
